@@ -9,7 +9,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors({
-  origin: "https://my-store-frontend-tau.vercel.app/",
+  origin: "https://my-store-frontend-tau.vercel.app",
   credentials: true,
 }));
 
