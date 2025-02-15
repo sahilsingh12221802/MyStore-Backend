@@ -9,8 +9,8 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173","https://my-store-smoky-eight.vercel.app/"], 
-  credentials: true, 
+  origin: "https://my-store-frontend-tau.vercel.app/",
+  credentials: true,
 }));
 
 mongoose.connect(config.mongoose.url)
