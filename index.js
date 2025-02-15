@@ -4,14 +4,13 @@ const config = require("./config/config");
 const router = require("./routes/qart/index");
 const passport = require("passport");
 const { jwtStrategy } = require("./config/passport");
-const cors = require("cors"); // Import the cors package
+const cors = require("cors");
 
 const app = express();
 
-// Enable CORS
 app.use(cors({
-  origin: "http://localhost:5173", // Allow requests from your frontend
-  credentials: true, // Allow cookies and credentials
+  origin: ["http://localhost:5173","https://my-store-smoky-eight.vercel.app/"], 
+  credentials: true, 
 }));
 
 mongoose.connect(config.mongoose.url)
